@@ -1,0 +1,79 @@
+Former President Donald Trump is plotting a return to Wall Street with a new media company taking aim at Big Tech.
+
+But Trump Media & Technology Group's path to the stock market faces a formidable obstacle: President Joe Biden's regulators.
+Biden's top cop on Wall Street, SEC Chairman Gary Gensler, is openly skeptical of SPACs, or Special Purpose Acquisition Companies. And Trump's SPAC deal features a host of red flags, including the backing of a Chinese firm with a checkered regulatory history, that have captured the attention of federal authorities.
+That's why legal experts tell CNN that securities regulators are likely to heavily scrutinize Trump's SPAC, slowing down or even derailing the deal altogether.
+&#39;This is weird and murky.&#39; Trump SPAC deal values firm at more than $10 billion despite red flags
+'This is weird and murky.' Trump SPAC deal values firm at more than $10 billion despite red flags
+"There is a huge risk the SEC will shut it down," said Thomas Gorman, a partner at the law firm Dorsey & Whitney and former official at the SEC.
+Robert Lamm, chair of the securities and corporate governance practice at law firm Gunster, said that although he's not involved in the Trump deal his experience tells him the SEC could tap the brakes on the Trump SPAC by demanding the entities improve their disclosures.
+"They are going to do everything they can to slow this deal, to the point that it can't go," said Lamm, who has represented companies on disclosure matters, often involving dialogue with the SEC.
+The SEC declined to comment.
+Regulators are investigating the Trump SPAC
+In October, Trump announced plans to launch a new media company that will "stand up to the tyranny of Big Tech." Trump Media & Technology Group (TMTG) simultaneously made public a deal to merge with a SPAC company called Digital World Acquisition Corp.
+SPACs raise money from the public and promise to use those funds to acquire private firms. It's an increasingly popular way for private companies to go public, without the hassle and costs of a traditional initial public offering (IPO).
+SPAC deals, also known as reverse mergers, were once frowned upon. But in recent years SPACs have become all the rage, with celebrities, former politicians and professional athletes getting involved.
+As soon as I see a Chinese-sponsored company, with this kind of regulatory history, a red light goes on."
+
+," SAID CHARLES WHITEHEAD, PROFESSOR AT CORNELL LAW SCHOOL
+
+Almost immediately, the Trump SPAC generated enormous enthusiasm among some investors — and raised serious questions among experts.
+For starters, TMTG has no known revenue or product. An Apple App Store listing indicates the venture plans to launch its social media app Truth Social on February 21.
+As CNN previously reported, TMTG posted an investor presentation in December that appears to contain errors and seems to have been partially copied and pasted from the internet. (One slide defines a user as a "sales representative who travels to visit customers," a definition that is hard to square with the fact this is a media company, not a sales platform.)
+TMTG's new CEO is former Republican Congressman Devin Nunes, who has no business experience in technology or social media.
+And Digital World has already disclosed that federal regulators are investigating the deal.
+Yet, based on Digital World's closing price on Monday, TMTG has achieved a staggering market valuation of $11.4 billion, according to Renaissance Capital, which provides IPO-focused ETFs and pre-IPO research.
+Neither TMTG nor Digital World responded to requests for comment.
+SPAC backer has a history with the SEC
+Authorities are already familiar with Arc Capital, a Shanghai-based firm that is helping take Trump's media company public. Arc, also known as Arc Group, is the sponsor of Digital World.
+In exchange for a stake in the company, sponsors typically provide financial support to get SPACs off the ground, giving them the capital needed to hire lawyers, executives and other staff. SPAC sponsors tend to buy equity in the SPAC at "more favorable terms" than investors in the IPO, the SEC notes.
+As the Washington Post recently reported, Arc has a history of SEC investigations after the firm "repeatedly helped create or finance companies with little or no revenue, no customers and office locations that point to P.O. boxes."
+To protect investors in Arc deals, the SEC has resorted to a rarely used enforcement tool: Stop orders.
+Gary Gensler, chairman of the SEC, has made clear he is concerned about &quot;inherent&quot; risks involved in SPAC deals. 
+Gary Gensler, chairman of the SEC, has made clear he is concerned about "inherent" risks involved in SPAC deals.
+In 2017, the SEC stopped three Arc-backed companies from selling shares to the public, finding that they "materially misstated the nature and scope of their businesses." And the agency suspended trading in a fourth Arc-related business.
+Although no charges appear to have been brought against Arc in these cases, the fact that the Trump deal involves a company whose transactions have been halted by the SEC is raising eyebrows among legal experts.
+"As soon as I see a Chinese-sponsored company, with this kind of regulatory history, a red light goes on," said Charles Whitehead, a professor at Cornell Law School.
+Since 1995, the SEC has only issued 42 stop orders, according to the agency.
+"You don't want a stop order because it's such a black mark," said Whitehead. "Normally, if there is an irreconcilable difference with the SEC, you withdraw your registration statement. Stop orders are uncommon because no one wants to get to the point of a stop order."
+Arc did not respond to multiple requests for comment.
+Timing is key in the Trump SPAC
+Legal experts said the SEC is likely to look most closely at whether Digital World misled investors about the timing of its deal talks with TMTG.
+In late October, the New York Times reported that Trump began discussing a merger with Digital World long before the blank-check company went public and before such talks were disclosed to investors.
+That would call into question the accuracy of Digital World's disclosures and whether it really is a blank-check company. Some investors who bought Digital World when it went public last year may not have if they knew Trump was the merger target all along. Others would have done so but didn't because they didn't know Trump was involved.
+"A blank check company is supposed to be a blank check company, not a hideaway for the Trump media company or anyone else to access the public markets," Whitehead, the Cornell professor, said.
+Who&#39;s to blame for inflation? It&#39;s complicated
+Who's to blame for inflation? It's complicated
+The Times reported Trump had been discussing a deal with Digital World CEO Patrick Orlando since at least March 2021. However, in a filing last May, Digital World told investors it did not yet have a merger partner.
+"We have not selected any specific business target and we have not, nor has anyone on our behalf, initiated any substantive discussions, directly or indirectly, with any business combination target," Digital World said in that filing.
+Last month, Digital World said in a filing that federal regulators are investigating the deal and are seeking documents and communications between the firm and TMTG. The Financial Industry Regulatory Authority, or FINRA, is also looking into trading prior to the deal's announcement, Digital World said.l
+Disclosure scrutiny
+Ashley Ebersole, a former SEC attorney who is now a partner at Bryan Cave Leighton Paisner, said the timing in the deal talks could become the crux of an SEC enforcement action.
+If the SEC finds evidence the promoters of the deal knew these discussions had to be disclosed and "intentionally hid it from investors," Ebersole said, this will become the basis for a potential "fraud charge by the SEC."
+Ebersole, who represents clients targeted by the SEC and other regulators, said this would also give investors the ability to demand their money back.
+Jill Fisch, a business law professor at the University of Pennsylvania Law School, said regulators will focus on the accuracy of disclosures — not the merits of the merger.
+"The SEC doesn't decide if a merger is good or bad for stockholders," said Fisch. "That's not the SEC's job. The SEC is concerned about whether investors have the opportunity to evaluate the deal."
+Investors unfazed by regulatory scrutiny
+Gensler, the chairman of the SEC, has raised concerns about SPACs broadly.
+In July, the SEC charged a SPAC, a sponsor, a merger target and the CEO with "misleading disclosures" ahead of a proposed deal. Gensler said in a statement at the time that the case illustrates "risks inherent to SPAC transactions" as those who stand to earn profits from a merger may conduct "inadequate due diligence and mislead investors."
+And at a conference last month, Gensler worried that investors in SPAC deals "may be making decisions based on incomplete information or just plain old hype."
+Exclusive: Car prices are surging. Elizabeth Warren blames corporate greed
+Exclusive: Car prices are surging. Elizabeth Warren blames corporate greed
+The Trump SPAC has generated considerable excitement among some investors. Although it remains off its peak, Digital World is trading about 450% above where it was before the Trump deal was announced.
+Matthew Tuttle, CEO of Tuttle Capital Management, said trading activity suggests little worry about the regulatory risk around the Trump SPAC.
+"I don't think there is asny concern, but there should be," said Tuttle. "I would be scared to buy this. I would be scared to short this. All I do is watch it in amazement."
+Tuttle added that given the enormous attention this deal has attracted, regulators are likely to scrutinize it very closely.
+"If there is the slightest hint of wrongdoing, they are going to try to bring the hammer down on this thing," he said.
+'Nobody saw that coming'
+But this is a sensitive situation for the SEC, an independent agency run by a bipartisan five-member commission.
+Blocking the Trump SPAC would open the agency to charges of political bias and a legal fight with a former president who has a legendary history of bringing lawsuits.
+Lamm, the Gunster attorney, noted that Congress controls the SEC's budget and the midterm elections this November could give Republicans control of both the US Senate and the House of Representatives.
+"Does the SEC want to take a chance that its budget will be cut?" he asked.
+Gorman, the former SEC official, said agency officials will be extra careful here, spending more time to review the case. But he said they won't shy away from acting, if it's warranted.
+"They know Trump will be litigious. That's okay, they are litigious themselves," Gorman said. "They're not going to let him go out there and sell junk."
+During his time running the SEC, Gensler has repeatedly stressed the agency's role in protecting investors, in everything from crypto markets and trading apps to SPACs.
+Why shares of homebuilders just plunged
+Why shares of homebuilders just plunged
+"If the SEC lets this go and it drops to zero, investors will get hurt," Tuttle said of the Trump SPAC. "That would be a massive PR black eye for the SEC."
+Tuttle added that the SEC will seek to avoid a repeat of Archegos. That little-known US hedge fund imploded last year, catching regulators and investors off guard, and causing sizable losses to Wall Street firms.
+"Archegos you could get away with. Nobody saw that coming," said Tuttle. "But this is not coming out of left field. This is Donald Trump."
