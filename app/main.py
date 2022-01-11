@@ -4,6 +4,7 @@ import uvicorn as uvicorn
 from fastapi import FastAPI
 from fastapi import Request, Header
 
+from app.api.pipeline.input_model import InputText
 from app.api.pipeline.output_model import PipelineOutput
 from app.models.sentiment import get_sentiment
 
@@ -17,9 +18,8 @@ async def root():
 
 @app.post("/sentiment", response_model=PipelineOutput, response_description="Processed request",
           response_model_exclude_unset=True)
-#async def sentiment_api(request: Request, access_token: Optional[str] = Header(None)):
-async def sentiment_api(request: Request):
-    res = await get_sentiment(request,input_text="")
+async def sentiment_api(req_body: InputText, request: Request):
+    res = await get_sentiment(input_text=req_body.input_text)
     if res:
         return res
     return None
