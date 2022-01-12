@@ -3,10 +3,10 @@ from numpy import dot
 from numpy.linalg import norm
 
 from app.common import CustomModel
-from universal_embedder import conversational_embedder
 
 # Press Shift+F10 to execute it or replace it with your code.
 # Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+from app.models.universal_embedder import conversational_embedder
 
 phrase_break_threshold = 0.1
 phrase_merge_threshold = 0.25
