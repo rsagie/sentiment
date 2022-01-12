@@ -145,6 +145,11 @@ async def cluster_texts_api(req_body: CustomModel):
     for label in req_body.labels:
         if label.type == label_type:
             input_texts.append(label.span_text.strip())
+
+    with open('input_texts.txt','w',encoding='utf8') as f:
+        for item in input_texts:
+            f.write("%s\n" % item)
+
     clusters = cluster_texts(input_texts)
     clusters_count = 0
     elements = []
