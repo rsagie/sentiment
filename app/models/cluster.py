@@ -144,7 +144,7 @@ async def cluster_texts_api(req_body: CustomModel):
     label_type = req_body.params.get('type')
     for label in req_body.labels:
         if label.type == label_type:
-            input_texts.append(label.value)
+            input_texts.append(label.span_text.strip())
     clusters = cluster_texts(input_texts)
     clusters_count = 0
     elements = []

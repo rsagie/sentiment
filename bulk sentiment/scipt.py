@@ -23,6 +23,7 @@ def get_txt_files(dir):
         if (os.path.isdir(path)):
             yield from get_txt_files(path)
         else:
+            # print(f"Article name: {path}")
             yield path
 
 
@@ -44,4 +45,5 @@ def print_website_sentiment(website):
 
 if __name__ == '__main__':
     print_website_sentiment(website= 'cnn')
+    print("\n")
     print_website_sentiment(website= 'fox')
