@@ -21,7 +21,7 @@ def get_embedding(text):
 
 
 def cosine_distance(a, b):
-    return 1-(dot(a, b) / (norm(a) * norm(b)))
+    return 1 - (dot(a, b) / (norm(a) * norm(b)))
 
 
 def cluster_texts(texts):
@@ -136,29 +136,32 @@ def test():
     # print(lines[0])
     # print(lines[1])
 
-    cluster_texts(["hello","good morning"])
+    cluster_texts(["hello", "good morning"])
 
 
 async def cluster_texts_api(req_body: CustomModel):
     input_texts = []
+    label_type = req_body.params.get('type')
     for label in req_body.labels:
-        input_texts.append(label.value)
+        if label.type == label_type:
+            input_texts.append(label.value)
     clusters = cluster_texts(input_texts)
     clusters_count = 0
     elements = []
     for cluster in clusters:
-        element ={
+        element = {
             'count': cluster.count,
-            'text' :cluster.text
+            'text': cluster.text
         }
         elements.append(element)
         clusters_count = clusters_count + cluster.count
-    value_dict = {'count':clusters_count, 'elements':elements}
-    label = Label(type="cluster", name="sentiment", span=None, value=str(value_dict),
-                      output_spans=[],
-                      input_spans=None, span_text=None)
+    value_dict = {'count': clusters_count, 'elements': elements}
+    label = Label(type="cluster", name=label_type, span=None, value=str(value_dict),
+                  output_spans=[],
+                  input_spans=None, span_text=None)
     skill_output: SkillOutput = SkillOutput(labels=[label])
     return skill_output
+
 
 test()
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
