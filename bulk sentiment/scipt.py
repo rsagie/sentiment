@@ -31,10 +31,16 @@ def print_website_sentiment(website):
     for article in get_txt_files(f'./data/{website}'):
         article_sentiment = pipeline(input_text=open(article, 'r').read()).json()
         labels = article_sentiment.get("output")[0].get("labels")
+        sentiment = None
         for label in labels:
             type = label.get('type')
             if type == 'custom':
-                print("Sentiment: "+label.get('value'))
+                sentiment = label.get('value')
+        if sentiment:
+            print(f"Sentiment:{sentiment}")
+        else:
+            print("Skipped not interesting")
+
 
 if __name__ == '__main__':
     print_website_sentiment(website= 'cnn')
