@@ -1,35 +1,38 @@
 import os
 import requests
 
-URL = 'https://stage-studio.oneai.com/api/v0/pipeline'
+URL = 'http://localhost:9080/api/v0/pipeline'
 
-def pipeline(input_text, skills):
+
+def pipeline(input_text):
     return requests.post(URL, headers={
         'accept': 'application/json',
         'Content-Type': 'application/json'
     }, json={
         'text': input_text,
-        'steps': [
-            {
-                'skill': skill,
-                'id': id + 1,
-                'inupt': id
-            } for id, skill in enumerate(skills)
-        ],
-        'input_type': 'article'
-    })
-
+        'input_type': 'article',
+        "steps": [
+            {"skill": "entities", "params": {}},
+            {"skill": "custom", "params": {"url": "http://34.134.67.245:9080/sentiment", "auth_key": "password"},
+             "cond": {"entities": {"$contains": "Trump"}}}]
+    }
+                         )
 def get_txt_files(dir):
     for item in os.listdir(dir):
         path = os.path.join(dir, item)
-        if (os.path.isdir(path)): yield from get_txt_files(path)
-        else: yield path
+        if (os.path.isdir(path)):
+            yield from get_txt_files(path)
+        else:
+            yield path
+
 
 if __name__ == '__main__':
-    for article in get_txt_files('bulk sentiment/data'):
-        print(article, pipeline(
-            open(article, 'r').read(),
-            ['summarize', 'article-topics']
-        ).__dict__)
-        break
+    for article in get_txt_files('./data'):
+        article_sentiment = pipeline(input_text=open(article, 'r').read())
+        print(article_sentiment)
+        # print(article, pipeline(
+        #     open(article, 'r').read(),
+        #     ['summarize', 'article-topics']
+        # ).__dict__)
+        # break
     pass
