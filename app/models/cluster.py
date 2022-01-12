@@ -2,7 +2,8 @@
 from numpy import dot
 from numpy.linalg import norm
 
-from app.common import CustomModel
+from app.api.pipeline.output_model import SkillOutput
+from app.common import CustomModel, Label
 
 # Press Shift+F10 to execute it or replace it with your code.
 # Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
@@ -137,8 +138,27 @@ def test():
 
     cluster_texts(["hello","good morning"])
 
-def cluster_texts_api(req_body: CustomModel):
-    cluster_texts(["hello","good morning"])
+
+async def cluster_texts_api(req_body: CustomModel):
+    input_texts = []
+    for label in req_body.labels:
+        input_texts.append(label.value)
+    clusters = cluster_texts(input_texts)
+    clusters_count = 0
+    elements = []
+    for cluster in clusters:
+        element ={
+            'count': cluster.count,
+            'text' :cluster.text
+        }
+        elements.append(element)
+        clusters_count = clusters_count + cluster.count
+    value_dict = {'count':clusters_count, 'elements':elements}
+    label = Label(type="cluster", name="sentiment", span=None, value=str(value_dict),
+                      output_spans=[],
+                      input_spans=None, span_text=None)
+    skill_output: SkillOutput = SkillOutput(labels=[label])
+    return skill_output
 
 test()
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
