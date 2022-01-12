@@ -1,15 +1,23 @@
 import os
 import requests
 
-URL = 'http://34.134.67.245:9080/sentiment'
+URL = 'https://stage-studio.oneai.com/api/v0/pipeline'
 
-def get_sentiment(article):
+def pipeline(input_text, skills):
     return requests.post(URL, headers={
         'accept': 'application/json',
         'Content-Type': 'application/json'
     }, json={
-        'input_text': article
-    }).json()['labels'][0]['value']
+        'text': input_text,
+        'steps': [
+            {
+                'skill': skill,
+                'id': id + 1,
+                'inupt': id
+            } for id, skill in enumerate(skills)
+        ],
+        'input_type': 'article'
+    })
 
 def get_txt_files(dir):
     for item in os.listdir(dir):
@@ -19,5 +27,9 @@ def get_txt_files(dir):
 
 if __name__ == '__main__':
     for article in get_txt_files('bulk sentiment/data'):
-        print(article, get_sentiment(open(article, 'r').read()))
+        print(article, pipeline(
+            open(article, 'r').read(),
+            ['summarize', 'article-topics']
+        ).__dict__)
+        break
     pass
