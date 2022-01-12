@@ -151,19 +151,21 @@ async def cluster_texts_api(req_body: CustomModel):
 
     clusters = cluster_texts(input_texts)
     clusters_count = 0
-    elements = []
+    labels = []
     for cluster in clusters:
-        element = {
-            'count': cluster.count,
-            'text': cluster.text
-        }
+        elements = []
+        for sub_cluster in cluster.children:
+            element = {
+                'count': sub_cluster.count,
+                'text': sub_cluster.text
+            }
         elements.append(element)
-        clusters_count = clusters_count + cluster.count
-    value_dict = {'count': clusters_count, 'elements': elements}
-    label = Label(type="cluster", name=label_type, span=None, value=str(value_dict),
-                  output_spans=[],
-                  input_spans=None, span_text=None)
-    skill_output: SkillOutput = SkillOutput(labels=[label])
+        value_dict = {'count': cluster.count, 'elements': elements}
+        label = Label(type="cluster", name=label_type, span=None, value=str(value_dict),
+                      output_spans=[],
+                      input_spans=None, span_text=None)
+        labels.append(label)
+    skill_output: SkillOutput = SkillOutput(labels=labels)
     return skill_output
 
 
