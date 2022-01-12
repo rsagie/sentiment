@@ -2,8 +2,7 @@ import logging
 from typing import List
 from textblob import TextBlob
 
-from app.api.pipeline.output_model import PipelineOutput, OutputBlock, Label, SkillOutput
-from app.common import Status
+from app.api.pipeline.output_model import Label, SkillOutput
 
 logger = logging.getLogger(__name__)
 
