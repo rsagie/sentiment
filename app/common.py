@@ -3,22 +3,13 @@ from typing import NamedTuple, List
 from enum import Enum
 
 
-class Status(str, Enum):
-    success = 'success'
-    failure = 'failure'
-
-
 class TextType(str, Enum):
     article = 'article'
     conversation = 'conversation'
 
-class TextSegment(NamedTuple):
-    start: int = Field(...)
-    end: int = Field(...)
+
+class CustomModel(BaseModel):
     text: str = Field(...)
-    meta: str = Field('')
-
-
-class TextSegmentList(BaseModel):
-    segments: List[TextSegment] = Field(default=[])
-    type: TextType = Field(...)
+    type: TextType = Field(..., description='Input text type')
+    url: str = Field(..., description='URL link for the remote skill')
+    auth_key: str = Field(..., description='Auth key of the remote url')
