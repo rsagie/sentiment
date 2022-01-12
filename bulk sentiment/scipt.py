@@ -26,13 +26,16 @@ def get_txt_files(dir):
             yield path
 
 
+def print_website_sentiment(website):
+    print(f"Web site: {website}")
+    for article in get_txt_files(f'./data/{website}'):
+        article_sentiment = pipeline(input_text=open(article, 'r').read()).json()
+        labels = article_sentiment.get("output")[0].get("labels")
+        for label in labels:
+            type = label.get('type')
+            if type == 'custom':
+                print("Sentiment: "+label.get('value'))
+
 if __name__ == '__main__':
-    for article in get_txt_files('./data'):
-        article_sentiment = pipeline(input_text=open(article, 'r').read())
-        print(article_sentiment)
-        # print(article, pipeline(
-        #     open(article, 'r').read(),
-        #     ['summarize', 'article-topics']
-        # ).__dict__)
-        # break
-    pass
+    print_website_sentiment(website= 'cnn')
+    print_website_sentiment(website= 'fox')
