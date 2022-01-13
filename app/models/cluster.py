@@ -161,9 +161,9 @@ async def cluster_texts_api(req_body: CustomModel):
             }
         elements.append(element)
         value_dict = {'count': cluster.count, 'elements': elements}
-        label = Label(type="cluster", name=label_type, span=None, value=str(value_dict),
+        label = Label(type="cluster", name=label_type, span=None, value=str(value_dict).replace("'",'"'),
                       output_spans=[],
-                      input_spans=None, span_text=None)
+                      input_spans=None, span_text=cluster.text)
         labels.append(label)
     skill_output: SkillOutput = SkillOutput(labels=labels)
     return skill_output
