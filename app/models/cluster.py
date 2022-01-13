@@ -1,4 +1,6 @@
 # This is a sample Python script.
+import json
+
 from numpy import dot
 from numpy.linalg import norm
 
@@ -37,7 +39,7 @@ def cluster_texts(texts):
     # sort clusters from biggest to smallest
     clusters.sort(key=lambda x: x.count, reverse=True)
 
-    return clusters
+    return clusters[:25]
 
 
 class Phrase:
@@ -162,7 +164,7 @@ async def cluster_texts_api(req_body: CustomModel):
         elements.append(element)
         value_dict = {'count': cluster.count, 'elements': elements}
 
-        label = Label(type="cluster", name=label_type, span=None, value=str(value_dict).replace("'",''),
+        label = Label(type="cluster", name=label_type, span=None, value=json.dumps(value_dict),
                       output_spans=[],
                       input_spans=None, span_text=cluster.text)
         labels.append(label)
