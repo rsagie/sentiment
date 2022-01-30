@@ -18,19 +18,8 @@ class OutputSpan(BaseModel):
 
 
 class Label(BaseModel):
-    type: str = Field(..., description='Label type')
-    name: Optional[str] = Field(None, description='Label name')
-    span: Union[Span, None] = Field(..., description='Origin span')
-    value: Union[str, float, None] = Field(..., description='Value')
-    origin: Optional[str] = Field(None, description='Origin value')
-    output_spans: List[OutputSpan] = Field(..., description='Utterance spans')
-    input_spans: List[OutputSpan] = Field(None, description='Origin utterance spans')
     span_text: Union[str, None] = Field(..., description='Span text')
 
 
 class CustomModel(BaseModel):
-    text: str = Field(...)
-    type: TextType = Field(..., description='Input text type')
-    url: str = Field(None, description='URL link for the remote skill')
     labels: List[Label] = Field([], description='Labels')
-    params: Dict = Field({}, description='Custom skill parameters')
