@@ -143,31 +143,21 @@ def test():
 
 async def cluster_texts_api(req_body: CustomModel):
     input_texts = []
-    label_type = req_body.params.get('type')
     for label in req_body.labels:
-        if label.type == label_type:
-            text = label.span_text.strip()
-            if len(text) > 0:
-                input_texts.append(text)
+        text = label.span_text.strip()
+        if len(text) > 0:
+            input_texts.append(text)
 
-    #clusters = cluster_texts(input_texts)
     clusters = conversational_embedder(input_texts).tolist()
     clusters_count = 0
-    elements = []
     labels = []
-    for cluster in clusters:
-        element = {
-            'values': cluster,
-            'text': input_texts[clusters_count]
-        }
-        clusters_count = clusters_count + 1
-        elements.append(element)
-        value_dict = {'elements': elements}
-
-        label = Label(type="cluster", name=label_type, span=None, value=json.dumps(value_dict),
+    for text in input_texts:
+        label = Label(type="embed", name=None, span=None, value=json.dumps(clusters[clusters_count]),
                       output_spans=[],
-                      input_spans=None, span_text=cluster.text)
+                      input_spans=None, span_text=text)
         labels.append(label)
+        clusters_count = clusters_count + 1
+
     skill_output: SkillOutput = SkillOutput(labels=labels)
     return skill_output
 

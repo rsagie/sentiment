@@ -21,7 +21,7 @@ async def sentiment_api(req_body: CustomModel, request: Request):
     return None
 
 
-@app.post("/cluster", response_model=SkillOutput, response_description="Processed request",
+@app.post("/embed", response_model=SkillOutput, response_description="Processed request",
           response_model_exclude_unset=True)
 async def cluster_api(req_body: CustomModel, request: Request):
     res = await cluster_texts_api(req_body)
