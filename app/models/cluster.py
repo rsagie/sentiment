@@ -148,21 +148,21 @@ async def cluster_texts_api(req_body: CustomModel):
         if label.type == label_type:
             text = label.span_text.strip()
             if len(text) > 0:
-                print(text)
                 input_texts.append(text)
 
-    clusters = cluster_texts(input_texts)
+    #clusters = cluster_texts(input_texts)
+    clusters = conversational_embedder(input_texts).tolist()
     clusters_count = 0
+    elements = []
     labels = []
     for cluster in clusters:
-        elements = []
-        for sub_cluster in cluster.children:
-            element = {
-                'count': sub_cluster.count,
-                'text': sub_cluster.text
-            }
+        element = {
+            'values': cluster,
+            'text': input_texts[clusters_count]
+        }
+        clusters_count = clusters_count + 1
         elements.append(element)
-        value_dict = {'count': cluster.count, 'elements': elements}
+        value_dict = {'elements': elements}
 
         label = Label(type="cluster", name=label_type, span=None, value=json.dumps(value_dict),
                       output_spans=[],

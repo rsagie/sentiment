@@ -31,7 +31,6 @@ class Label(BaseModel):
 class CustomModel(BaseModel):
     text: str = Field(...)
     type: TextType = Field(..., description='Input text type')
-    url: str = Field(..., description='URL link for the remote skill')
-    auth_key: str = Field(..., description='Auth key of the remote url')
+    url: str = Field(None, description='URL link for the remote skill')
     labels: List[Label] = Field([], description='Labels')
     params: Dict = Field({}, description='Custom skill parameters')
